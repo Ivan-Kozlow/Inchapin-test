@@ -1,7 +1,5 @@
 import styles from './page.module.scss'
 
 export default function Home() {
-  return (
-    
-  );
+	return <div>Hello</div>
 }
