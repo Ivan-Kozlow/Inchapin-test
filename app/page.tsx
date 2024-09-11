@@ -1,5 +1,10 @@
-import styles from './page.module.scss'
+import { WithScrollOptions } from './WithScroll'
+import { Header } from './Widgets/Header'
 
 export default function Home() {
-	return <div>Hello</div>
+	return (
+		<WithScrollOptions>
+			<Header />
+		</WithScrollOptions>
+	)
 }

@@ -14,7 +14,7 @@ const ProximaNova = localFont({
 		{ path: './fonts/ProximaNova-Bold.woff2', weight: '700' },
 	],
 	display: 'swap',
-	variable: '--font-proxima-nova',
+	variable: '--font-Proxima-Nova',
 })
 
 export const metadata: Metadata = {
@@ -30,7 +30,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<body className={`${ProximaNova.className}`}>{children}</body>
+			<body data-scrollbar className={`${ProximaNova.className}`}>
+				{children}
+			</body>
 		</html>
 	)
 }
