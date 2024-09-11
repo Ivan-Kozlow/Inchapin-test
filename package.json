@@ -1,0 +1,26 @@
+{
+  "name": "inchapin-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.9",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-select": "^5.8.0",
+    "react-transition-group": "^4.4.5",
+    "sass": "^1.78.0",
+    "smooth-scrollbar": "^8.8.4"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
+  }
+}
