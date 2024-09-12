@@ -1,0 +1,25 @@
+@import '../../../../shared/styles/mixins.scss';
+
+.header {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	// FIXME ширина шапки почему-то во весь экран
+	min-width: 100%;
+	display: flex;
+	padding: 28px;
+	min-height: 131px;
+
+	@include media1440() {
+		min-height: 100px;
+	}
+	@include media1024() {
+		min-height: 103px;
+	}
+	@include media768() {
+		min-height: 123px;
+	}
+	@include media360() {
+		min-height: 81px;
+	}
+}

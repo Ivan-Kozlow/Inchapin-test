@@ -1,10 +1,104 @@
-import { WithScrollOptions } from './WithScroll'
+import styles from './page.module.scss'
+
 import { Header } from './Widgets/Header'
 
 export default function Home() {
 	return (
-		<WithScrollOptions>
+		// FIXME не фиксируется шапка при скролле, и появляется горизонтальная полоса прокрутки
+		// <WithScrollOptions>
+		<div className={styles.container}>
 			<Header />
-		</WithScrollOptions>
+			<main className={styles.content}>
+				<div>content1</div>
+				<div>content2</div>
+				<div>content3</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+				<div>content</div>
+			</main>
+		</div>
+		// </WithScrollOptions>
 	)
 }
