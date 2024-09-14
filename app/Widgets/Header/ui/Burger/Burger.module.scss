@@ -68,11 +68,13 @@
 			transform: translateY(-50%);
 		}
 
-		#{$burger}__button:hover &::before {
+		#{$burger}__button:hover &::before,
+		#{$burger}__button:focus &::before {
 			transform: translate(0, -2px);
 		}
 
-		#{$burger}__button:hover &::after {
+		#{$burger}__button:hover &::after,
+		#{$burger}__button:focus &::after {
 			transform: translate(0, 2px);
 		}
 	}

@@ -12,6 +12,10 @@
 			cursor: pointer;
 		}
 
+		&--is-focused {
+			background-color: #2576e0;
+		}
+
 		@include media1440() {
 			padding: 15px 20px;
 			gap: 10px;

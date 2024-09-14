@@ -60,7 +60,8 @@
 			transition: all 0.3s ease 0s;
 			padding: 18px 15px;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				color: gray;
 			}
 		}
@@ -73,7 +74,8 @@
 			transition: all 0.3s ease 0s;
 			padding: 18px 0 18px 15px;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				color: #003f92;
 			}
 		}
