@@ -1,6 +1,7 @@
 @import '../../../../shared/styles/mixins.scss';
 
 .select_flat {
+	$select: &;
 	&__control {
 		background-color: #2f80ed;
 		border-radius: 100px;
@@ -10,10 +11,18 @@
 
 		&:hover {
 			cursor: pointer;
+
+			#{$select}_text > * {
+				transform: translate(0, -18px);
+			}
 		}
 
 		&--is-focused {
 			background-color: #2576e0;
+
+			& #{$select}_text > * {
+				transform: translate(0, -18px);
+			}
 		}
 
 		@include media1440() {
@@ -78,6 +87,18 @@
 		&--is-focused {
 			color: #fff;
 			background-color: #2f80ed;
+		}
+	}
+
+	&_text {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		height: 17px;
+		overflow: hidden;
+
+		& > * {
+			transition: transform 0.3s ease 0s;
 		}
 	}
 }

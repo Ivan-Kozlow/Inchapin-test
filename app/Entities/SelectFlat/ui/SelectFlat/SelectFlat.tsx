@@ -14,7 +14,12 @@ export function SelectFlat() {
 			options={options}
 			classNamePrefix={'select_flat'}
 			isSearchable={false}
-			placeholder={'Выбрать квартиру'}
+			placeholder={
+				<div className='select_flat_text'>
+					<span className='select_flat_text_1'>Выбрать квартиру</span>
+					<span className='select_flat_text_2'>Выбрать квартиру</span>
+				</div>
+			}
 			unstyled
 		/>
 	)

@@ -32,7 +32,12 @@ export function Header() {
 				<a href='tel:+74955272121' className={styles.header__phone}>
 					+7 495 527 21 21
 				</a>
-				<button className={styles.header__call_button}>Заказать звонок</button>
+				<button className={styles.header__call_button}>
+					<div className={styles.header__call_button_text}>
+						<span className={styles.header__call_button_text_1}>Заказать звонок</span>
+						<span className={styles.header__call_button_text_2}>Заказать звонок</span>
+					</div>
+				</button>
 			</div>
 		</header>
 	)

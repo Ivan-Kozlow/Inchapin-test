@@ -71,12 +71,23 @@
 			font-size: 15px;
 			text-transform: uppercase;
 			color: #2f80ed;
-			transition: all 0.3s ease 0s;
 			padding: 18px 0 18px 15px;
 
-			&:hover,
-			&:focus {
-				color: #003f92;
+			&:hover #{$header}__call_button_text > *,
+			&:focus #{$header}__call_button_text > * {
+				transform: translate(0, -21px);
+			}
+
+			&_text {
+				display: flex;
+				flex-direction: column;
+				gap: 3px;
+				height: 17px;
+				overflow: hidden;
+
+				& > * {
+					transition: transform 0.3s ease 0s;
+				}
 			}
 		}
 	}
