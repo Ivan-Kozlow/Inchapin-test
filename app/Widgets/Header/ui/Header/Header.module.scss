@@ -4,22 +4,168 @@
 	background-color: white;
 	position: fixed;
 	top: 0;
-	// FIXME ширина шапки почему-то во весь экран
-	min-width: 100%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 100%;
+	max-width: 1800px;
+	margin: 0 auto;
+	padding: 0 20px;
+	z-index: 90;
+
 	display: flex;
-	padding: 28px;
+	align-items: center;
+	justify-content: space-between;
 	min-height: 131px;
 
+	&__left {
+		flex-basis: 390px;
+
+		display: flex;
+		gap: 33px;
+		align-items: center;
+	}
+
+	&__center {
+		&:hover > * {
+			transition: transform 0.3s ease-out 0s;
+			transform: scale(1.02);
+		}
+	}
+
+	&__phone_circle {
+		display: none;
+	}
+
+	&__select_left,
+	&__select_right {
+		width: 100%;
+	}
+
+	&__select_right {
+		display: none;
+	}
+
+	$header: &;
+
+	&__right {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+		max-width: 340px;
+
+		#{$header}__phone {
+			font-weight: 600;
+			font-size: 17px;
+			color: #111;
+			transition: all 0.3s ease 0s;
+			padding: 18px 15px;
+
+			&:hover {
+				color: gray;
+			}
+		}
+
+		#{$header}__call_button {
+			font-weight: 600;
+			font-size: 15px;
+			text-transform: uppercase;
+			color: #2f80ed;
+			transition: all 0.3s ease 0s;
+			padding: 18px 0 18px 15px;
+
+			&:hover {
+				color: #003f92;
+			}
+		}
+	}
+
 	@include media1440() {
+		padding: 0 40px;
 		min-height: 100px;
+
+		#{$header}__center img {
+			width: 156px;
+			height: 25px;
+		}
+
+		&__left {
+			flex-basis: 330px;
+		}
+
+		#{$header}__right {
+			gap: 10px;
+		}
+
+		#{$header}__phone {
+			font-size: 14px;
+		}
+		#{$header}__call_button {
+			font-size: 13px;
+		}
 	}
+
 	@include media1024() {
+		padding: 0 30px;
 		min-height: 103px;
+		gap: 15px;
+
+		&__left {
+			gap: 15px;
+			flex-basis: 255px;
+		}
+
+		#{$header}__phone {
+			font-size: 13px;
+		}
+		#{$header}__call_button {
+			font-size: 12px;
+		}
 	}
+
 	@include media768() {
+		padding: 0 40px;
 		min-height: 123px;
+
+		#{$header}__right {
+			flex-basis: 32px;
+			display: none;
+		}
+
+		#{$header}__left {
+			flex-basis: 32px;
+		}
+
+		&__phone_circle {
+			display: block;
+		}
+
+		&__select_left {
+			display: none;
+		}
+
+		&__select_right {
+			display: block;
+			flex-basis: 190px;
+		}
 	}
+
+	@media (max-width: 640px) {
+		&__phone_circle {
+			order: 1;
+		}
+
+		&__select_right {
+			display: none;
+		}
+	}
+
 	@include media360() {
+		padding: 0 20px;
 		min-height: 81px;
+
+		#{$header}__center img {
+			width: 131px;
+			height: 21px;
+		}
 	}
 }

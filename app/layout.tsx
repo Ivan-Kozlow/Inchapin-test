@@ -18,6 +18,9 @@ export const metadata: Metadata = {
 	title: 'Inchapin',
 	description: 'Inchapin test project',
 	robots: { index: false },
+	formatDetection: {
+		telephone: false,
+	},
 }
 
 export default function RootLayout({

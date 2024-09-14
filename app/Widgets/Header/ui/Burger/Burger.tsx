@@ -2,8 +2,14 @@
 import styles from './Burger.module.scss'
 import { useRef } from 'react'
 
+import { useOutside } from '@/Shared/utils/useOutside/useOutside'
+
 export function Burger() {
 	const burgerContentRef = useRef<HTMLUListElement>(null)
+	const ref = useOutside(() => {
+		if (!burgerContentRef.current) return
+		burgerContentRef.current.classList.remove(styles.burger__content_active)
+	})
 
 	const handleClick = () => {
 		if (!burgerContentRef.current) return
@@ -11,7 +17,7 @@ export function Burger() {
 	}
 
 	return (
-		<div className={styles.burger}>
+		<div ref={ref} className={styles.burger}>
 			<button className={styles.burger__button} onClick={handleClick}>
 				<span className={styles.burger__icon} />
 				<span className={styles.burger__text}>Меню</span>

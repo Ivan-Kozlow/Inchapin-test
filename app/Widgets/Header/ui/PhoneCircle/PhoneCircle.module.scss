@@ -1,0 +1,13 @@
+@import '../../../../shared/styles/mixins.scss';
+
+.phone {
+	display: block;
+	padding: 15px;
+	border-radius: 50%;
+	border: 1px solid #d7d7d7;
+	text-decoration: none;
+
+	@include media360() {
+		border-color: #2f80ed;
+	}
+}
