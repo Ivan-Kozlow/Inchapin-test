@@ -4,7 +4,7 @@ import { Header } from './Widgets/Header'
 
 export default function Home() {
 	return (
-		// FIXME не фиксируется шапка при скролле
+		// FIXME не фиксируется шапка при скролле, при кастомном скролее нужно отключить scroll-gutter в nullstyle
 		// <WithScrollOptions>
 		<div className={styles.container}>
 			<Header />
