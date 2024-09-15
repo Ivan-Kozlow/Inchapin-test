@@ -3,12 +3,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { PhoneCircle } from '../PhoneCircle/PhoneCircle'
+import { OrderCallButton } from '../OrderCallButton/OrderCallButton'
 import { Burger } from '../Burger/Burger'
 import { SelectFlat } from '@/Entities/SelectFlat'
 
 export function Header() {
 	return (
-		<header className={styles.header}>
+		<header id='header' className={styles.header}>
 			<div className={styles.header__left}>
 				<Burger />
 				<div className={styles.header__select_left}>
@@ -32,12 +33,7 @@ export function Header() {
 				<a href='tel:+74955272121' className={styles.header__phone}>
 					+7 495 527 21 21
 				</a>
-				<button className={styles.header__call_button}>
-					<div className={styles.header__call_button_text}>
-						<span className={styles.header__call_button_text_1}>Заказать звонок</span>
-						<span className={styles.header__call_button_text_2}>Заказать звонок</span>
-					</div>
-				</button>
+				<OrderCallButton />
 			</div>
 		</header>
 	)

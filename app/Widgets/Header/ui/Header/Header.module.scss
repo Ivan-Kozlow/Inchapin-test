@@ -2,15 +2,12 @@
 
 .header {
 	background-color: white;
-	position: fixed;
+	position: sticky;
 	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
 	width: 100%;
 	max-width: 1800px;
 	margin: 0 auto;
-	padding: 0 20px;
-	z-index: 90;
+	z-index: 80;
 
 	display: flex;
 	align-items: center;
@@ -65,35 +62,9 @@
 				color: gray;
 			}
 		}
-
-		#{$header}__call_button {
-			font-weight: 600;
-			font-size: 15px;
-			text-transform: uppercase;
-			color: #2f80ed;
-			padding: 18px 0 18px 15px;
-
-			&:hover #{$header}__call_button_text > *,
-			&:focus #{$header}__call_button_text > * {
-				transform: translate(0, -21px);
-			}
-
-			&_text {
-				display: flex;
-				flex-direction: column;
-				gap: 3px;
-				height: 17px;
-				overflow: hidden;
-
-				& > * {
-					transition: transform 0.3s ease 0s;
-				}
-			}
-		}
 	}
 
 	@include media1440() {
-		padding: 0 40px;
 		min-height: 100px;
 
 		#{$header}__center img {
@@ -112,13 +83,9 @@
 		#{$header}__phone {
 			font-size: 14px;
 		}
-		#{$header}__call_button {
-			font-size: 13px;
-		}
 	}
 
 	@include media1024() {
-		padding: 0 30px;
 		min-height: 103px;
 		gap: 15px;
 
@@ -130,13 +97,9 @@
 		#{$header}__phone {
 			font-size: 13px;
 		}
-		#{$header}__call_button {
-			font-size: 12px;
-		}
 	}
 
 	@include media768() {
-		padding: 0 40px;
 		min-height: 123px;
 
 		#{$header}__right {
@@ -173,7 +136,6 @@
 	}
 
 	@include media360() {
-		padding: 0 20px;
 		min-height: 81px;
 
 		#{$header}__center img {

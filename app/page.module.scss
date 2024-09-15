@@ -2,41 +2,23 @@
 @import './shared/styles/constants.scss';
 
 .container {
-	position: relative;
 	max-width: 1800px;
 	margin: 0 auto;
 	padding: 0 20px;
-	overflow: hidden;
-
-	.content {
-		margin-top: 131px;
-	}
 
 	@include media1440() {
 		padding: 0 40px;
-		.content {
-			margin-top: 100px;
-		}
 	}
 
 	@include media1024() {
 		padding: 0 30px;
-		.content {
-			margin-top: 103px;
-		}
 	}
 
 	@include media768() {
 		padding: 0 40px;
-		.content {
-			margin-top: 123px;
-		}
 	}
 
 	@include media360() {
 		padding: 0 20px;
-		.content {
-			margin-top: 81px;
-		}
 	}
 }
