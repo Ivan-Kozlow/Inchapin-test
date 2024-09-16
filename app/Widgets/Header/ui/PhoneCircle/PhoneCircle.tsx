@@ -1,10 +1,12 @@
 import styles from './PhoneCircle.module.scss'
 import Image from 'next/image'
 
-export function PhoneCircle() {
+type TypeProps = Omit<React.HTMLAttributes<HTMLButtonElement>, 'className'>
+
+export function PhoneCircle(props: TypeProps) {
 	return (
-		<a href='tel:+74955272121' className={styles.phone}>
+		<button {...props} className={styles.phone}>
 			<Image src={'/phone.svg'} alt='phone' width={14} height={14} />
-		</a>
+		</button>
 	)
 }

@@ -1,10 +1,10 @@
 import styles from './Header.module.scss'
-import Link from 'next/link'
 import Image from 'next/image'
 
 import { PhoneCircle } from '../PhoneCircle/PhoneCircle'
 import { OrderCallButton } from '../OrderCallButton/OrderCallButton'
 import { Burger } from '../Burger/Burger'
+import { FormOrderModal } from '@/Widgets/FormOrderModal'
 import { SelectFlat } from '@/Entities/SelectFlat'
 
 export function Header() {
@@ -17,13 +17,17 @@ export function Header() {
 				</div>
 			</div>
 
-			<div className={styles.header__phone_circle}>
-				<PhoneCircle />
-			</div>
+			<FormOrderModal
+				trigger={
+					<div className={styles.header__phone_circle}>
+						<PhoneCircle />
+					</div>
+				}
+			/>
 
-			<Link href={'/'} className={styles.header__center}>
+			<button className={styles.header__center}>
 				<Image src={'/logo.svg'} alt='logo' width={187} height={30} />
-			</Link>
+			</button>
 
 			<div className={styles.header__select_right}>
 				<SelectFlat />

@@ -1,14 +1,11 @@
+import { PopupProps } from 'reactjs-popup/dist/types'
+
 import Modal from '@/Shared/ui/Modal'
 
 type TypeProps = {
-	handleModalClose: () => void
-	isOpen: boolean
+	trigger: PopupProps['trigger']
 }
 
-export function FormOrderModal({ handleModalClose, isOpen }: TypeProps) {
-	return (
-		<Modal handleModalClose={handleModalClose} isOpen={isOpen}>
-			Hello world
-		</Modal>
-	)
+export function FormOrderModal({ trigger }: TypeProps) {
+	return <Modal trigger={trigger}>Hello world</Modal>
 }

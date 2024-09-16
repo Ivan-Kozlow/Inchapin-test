@@ -1,38 +1,69 @@
+'use client'
+
 import styles from './Modal.module.scss'
+import { PopupProps } from 'reactjs-popup/dist/types'
 import ReactModal from 'reactjs-popup'
-import { Transition } from 'react-transition-group'
+import { Transition, TransitionStatus } from 'react-transition-group'
+import { useRef } from 'react'
 
 import { Cross } from '../Cross'
 
-type Props = {
-	handleModalClose?: () => void
-	isOpen: boolean
-	children: React.ReactNode | React.ReactNode[]
+const duration = 300
+
+const defaultStyle = {
+	transition: `opacity ${duration}ms ease-in-out`,
+	opacity: 0,
 }
 
+const transitionStyles: Record<TransitionStatus, { opacity: number }> = {
+	entering: { opacity: 1 },
+	entered: { opacity: 1 },
+	exiting: { opacity: 0 },
+	exited: { opacity: 0 },
+	unmounted: { opacity: 0 },
+}
+
+type Props = {
+	children: React.ReactNode | React.ReactNode[]
+} & Omit<PopupProps, 'onClose' | 'className' | 'contentStyle' | 'overlayStyle'>
+
 const Modal = (props: Props) => {
-	const { handleModalClose, children, isOpen } = props
+	const { children, trigger, ...rest } = props
+	const nodeRef = useRef<HTMLDivElement>(null)
 
 	return (
-		<Transition timeout={300} in={isOpen} unmountOnExit>
+		<Transition nodeRef={nodeRef} timeout={300} unmountOnExit in={true}>
 			{(state) => (
-				<ReactModal
-					className={`${styles.modal}`}
-					open={isOpen}
-					closeOnEscape
-					onClose={handleModalClose}
-					nested
-					lockScroll
-					modal
-					closeOnDocumentClick={false}
-					overlayStyle={{ width: '100%', height: '100%', backgroundColor: 'white' }}
-					contentStyle={{ position: 'static' }}
+				<div
+					ref={nodeRef}
+					style={{
+						...defaultStyle,
+						...transitionStyles[state],
+					}}
 				>
-					<div className={styles.modal__cross}>
-						<Cross onClick={handleModalClose} />
-					</div>
-					<div className={styles.modal__content}>{children}</div>
-				</ReactModal>
+					<ReactModal
+						closeOnEscape
+						closeOnDocumentClick={false}
+						lockScroll
+						modal
+						nested
+						trigger={trigger}
+						{...rest}
+						className={`${styles.modal}`}
+						overlayStyle={{ width: '100%', height: '100%', backgroundColor: 'white' }}
+						contentStyle={{ position: 'static' }}
+					>
+						{/* @ts-ignore */}
+						{(close: () => void) => (
+							<>
+								<div className={styles.modal__cross}>
+									<Cross onClick={() => close()} />
+								</div>
+								<div className={styles.modal__content}>{children}</div>
+							</>
+						)}
+					</ReactModal>
+				</div>
 			)}
 		</Transition>
 	)
