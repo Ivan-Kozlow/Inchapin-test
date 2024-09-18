@@ -1,21 +1,19 @@
-'use client'
-
 import styles from './FormOrder.module.scss'
 import { Controller, useForm } from 'react-hook-form'
 import Link from 'next/link'
 
 import { INPUTS, defaultInputs } from '../../constants/Inputs'
 
-import { Input } from '@/Shared/ui/Input'
-import { TypeFormOrder } from '../../types/form'
+import { InputsGroupFormOrder } from '../InputsGroupFormOrder/InputsGroupFormOrder'
+import { IFormOrderInputs } from '../../types/form'
 
 export function FormOrder() {
-	const { handleSubmit, control } = useForm<TypeFormOrder>({
+	const { handleSubmit, control } = useForm<IFormOrderInputs>({
 		mode: 'onChange',
 		defaultValues: defaultInputs,
 	})
 
-	const onSubmit = (data: TypeFormOrder) => console.log(data)
+	const onSubmit = (data: IFormOrderInputs) => console.log(data)
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -25,7 +23,7 @@ export function FormOrder() {
 						control={control}
 						key={input.name}
 						name={input.name}
-						render={({ field }) => <Input {...input} {...field} label={input.label} />}
+						render={({ field }) => <InputsGroupFormOrder field={field} generalInputAttr={input} />}
 					/>
 				))}
 			</fieldset>

@@ -1,9 +1,11 @@
+'use client'
+
 import styles from './Input.module.scss'
-import { DetailedHTMLProps, InputHTMLAttributes, forwardRef } from 'react'
+import { InputHTMLAttributes, forwardRef } from 'react'
 
 export type TypeInputProps = {
-	label: string
-} & DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+	label?: string
+} & InputHTMLAttributes<HTMLInputElement>
 
 export const Input = forwardRef<HTMLInputElement, TypeInputProps>((props, ref) => {
 	return (

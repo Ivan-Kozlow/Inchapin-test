@@ -2,7 +2,6 @@
 
 import styles from './FormOrderModal.module.scss'
 import { PopupProps } from 'reactjs-popup/dist/types'
-import { useState } from 'react'
 
 import Modal from '@/Shared/ui/Modal'
 import { FormOrder } from '../FormOrder/FormOrder'
@@ -12,8 +11,6 @@ type TypeProps = {
 }
 
 export function FormOrderModal({ trigger }: TypeProps) {
-	const [value, setValue] = useState()
-
 	return (
 		<Modal trigger={trigger}>
 			<div className={styles.content}>

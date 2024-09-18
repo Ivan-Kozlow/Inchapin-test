@@ -1,8 +1,8 @@
 import { TypeInputProps } from '@/Shared/ui/Input/Input/Input'
-import { TypeFormOrder } from '../types/form'
+import { IFormOrderInputs } from '../types/form'
 
-interface IInputs extends TypeInputProps {
-	name: keyof TypeFormOrder
+export interface IInputs extends TypeInputProps {
+	name: keyof IFormOrderInputs
 	label: string
 }
 
