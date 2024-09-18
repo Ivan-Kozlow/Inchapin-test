@@ -1,0 +1,76 @@
+@import '../../../../Shared/styles/mixins.scss';
+
+.form {
+	padding: 10px 0;
+}
+
+.button {
+	display: block;
+	border-radius: 100px;
+	padding: 24px 69px;
+	background-color: #2f80ed;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 15px;
+	margin: 0 auto;
+	align-self: center;
+	color: white;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		color: whitesmoke;
+		background-color: #0f5fc9;
+	}
+
+	@include media1440() {
+		font-size: 14px;
+	}
+
+	@include media1024() {
+		padding: 20px 40px;
+	}
+
+	@include media360() {
+		font-size: 11px;
+	}
+}
+
+.fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 49px;
+	margin-bottom: 50px;
+
+	@include media1440() {
+		gap: 41px;
+	}
+
+	@include media1024() {
+		gap: 45px;
+	}
+
+	@include media360() {
+		gap: 41px;
+		margin-bottom: 40px;
+	}
+}
+
+.text {
+	text-align: center;
+	font-size: 14px;
+	max-width: 405px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	color: rgba(0, 0, 0, 0.5);
+
+	@include media1440() {
+		font-size: 12px;
+		max-width: 368px;
+	}
+}
+
+.link {
+	color: rgba(0, 0, 0, 0.5);
+	text-decoration: underline;
+	text-decoration-color: rgba(0, 0, 0, 0.5);
+}

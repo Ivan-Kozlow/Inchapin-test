@@ -1,0 +1,82 @@
+@import '../../../styles/mixins.scss';
+
+%activePlaceholder {
+	transform: translateY(-140%);
+	color: rgba(0, 0, 0, 0.76);
+}
+
+.label {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	.input {
+		flex: 1;
+		padding: 18px 15px 5px 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		outline: none;
+		font-size: 17px;
+
+		&::placeholder {
+			opacity: 0;
+		}
+
+		&:not(:placeholder-shown) + .placeholder {
+			@extend %activePlaceholder;
+			font-size: 15px;
+		}
+	}
+
+	.placeholder {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 17px;
+		pointer-events: none;
+		text-transform: uppercase;
+		transition: all 0.3s ease 0s;
+	}
+
+	&:focus-within .placeholder {
+		@extend %activePlaceholder;
+		font-size: 15px;
+	}
+
+	&:focus-within .placeholder {
+		@extend %activePlaceholder;
+	}
+
+	@include media1440() {
+		.input,
+		.placeholder {
+			font-size: 16px;
+		}
+
+		&:focus-within .placeholder {
+			font-size: 14px;
+		}
+	}
+
+	@include media1024() {
+		.input,
+		.placeholder {
+			font-size: 14px;
+		}
+
+		&:focus-within .placeholder {
+			font-size: 12px;
+		}
+	}
+	@include media360() {
+		.input,
+		.placeholder {
+			font-size: 11px;
+		}
+
+		&:focus-within .placeholder {
+			font-size: 10px;
+		}
+	}
+}

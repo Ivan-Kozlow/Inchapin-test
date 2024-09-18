@@ -1,0 +1,9 @@
+.modal_entering-overlay,
+.modal_entered-overlay {
+	opacity: 1;
+}
+
+.modal_exited-overlay,
+.modal_exiting-overlay {
+	opacity: 0;
+}

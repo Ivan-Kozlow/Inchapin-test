@@ -1,0 +1,31 @@
+@import '../../../../Shared/styles/mixins.scss';
+
+.content {
+	display: flex;
+	flex-direction: column;
+	max-width: 587px;
+	width: 100%;
+	max-height: 100vh;
+
+	.title {
+		font-size: 52px;
+		align-self: center;
+		margin-bottom: 80px;
+		text-transform: uppercase;
+
+		@include media1440() {
+			margin-bottom: 50px;
+			font-size: 40px;
+		}
+
+		@include media1024() {
+			font-size: 28px;
+		}
+
+		@include media360() {
+			font-size: 20px;
+			margin-right: auto;
+			margin-bottom: 30px;
+		}
+	}
+}
