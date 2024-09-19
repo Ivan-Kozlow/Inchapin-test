@@ -20,7 +20,7 @@ const overlayStyle: CSSProperties = {
 type Props = {
 	children: React.ReactNode | React.ReactNode[]
 	trigger: PopupProps['trigger']
-} & Omit<PopupProps, 'onClose' | 'className' | 'contentStyle' | 'overlayStyle'>
+} & Omit<PopupProps, 'onClose' | 'className' | 'overlayStyle'>
 
 const Modal = (props: Props) => {
 	const { children, ...rest } = props
@@ -38,7 +38,7 @@ const Modal = (props: Props) => {
 					nested
 					{...rest}
 					overlayStyle={overlayStyle}
-					contentStyle={{ position: 'static' }}
+					contentStyle={{ ...props.contentStyle, position: 'static' }}
 					className={`${styles.modal} modal_${state}`}
 				>
 					{/* @ts-ignore */}

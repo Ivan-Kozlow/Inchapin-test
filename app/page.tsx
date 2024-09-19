@@ -14,9 +14,10 @@ export default function Home() {
 			<main className={styles.content}>
 				<div className={styles.hero}>
 					<HeroWidget />
+				</div>
+				<div>
 					<AboutProject />
 				</div>
-				<div></div>
 			</main>
 		</div>
 		// </WithScrollOptions>
