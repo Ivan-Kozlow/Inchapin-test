@@ -1,5 +1,10 @@
 @import '../../../../shared/styles/mixins.scss';
 
+.video {
+	width: 100%;
+	height: 90vh;
+}
+
 .presentation__button {
 	flex: 1 0 auto;
 	width: 241px;

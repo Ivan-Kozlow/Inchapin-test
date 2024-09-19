@@ -28,7 +28,6 @@ export function VideoButtonWithModal() {
 				src='/aboutProject/test-video.mp4'
 				autoPlay
 				autoFocus
-				aria-valuenow={10}
 				controls
 				className={styles.video}
 			/>
