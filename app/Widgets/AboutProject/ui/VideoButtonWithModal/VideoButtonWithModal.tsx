@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './VideoButtonWithModal.module.scss'
 import Image from 'next/image'
 
@@ -18,6 +20,7 @@ export function VideoButtonWithModal() {
 			}
 		>
 			<video
+				ref={(el) => el?.requestFullscreen()}
 				src='/aboutProject/test-video.mp4'
 				autoPlay
 				autoFocus
