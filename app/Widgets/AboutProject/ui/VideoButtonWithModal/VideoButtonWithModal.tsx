@@ -6,6 +6,10 @@ import Image from 'next/image'
 import Modal from '@/Shared/ui/Modal'
 
 export function VideoButtonWithModal() {
+	const cbRefFullscreen = (el: HTMLVideoElement) => {
+		if (el) el.requestFullscreen()
+	}
+
 	return (
 		<Modal
 			trigger={
@@ -20,7 +24,7 @@ export function VideoButtonWithModal() {
 			}
 		>
 			<video
-				ref={(el) => el?.requestFullscreen()}
+				ref={cbRefFullscreen}
 				src='/aboutProject/test-video.mp4'
 				autoPlay
 				autoFocus
