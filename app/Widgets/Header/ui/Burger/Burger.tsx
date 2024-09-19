@@ -6,6 +6,7 @@ import { useOutside } from '@/Shared/utils/useOutside/useOutside'
 
 export function Burger() {
 	const burgerContentRef = useRef<HTMLUListElement>(null)
+
 	const ref = useOutside(() => {
 		if (!burgerContentRef.current) return
 		burgerContentRef.current.classList.remove(styles.burger__content_active)

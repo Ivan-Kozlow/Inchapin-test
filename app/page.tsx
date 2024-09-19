@@ -1,7 +1,9 @@
 import styles from './page.module.scss'
 
 import { WithScrollOptions } from './WithScroll'
+import { HeroWidget } from './Widgets/HeroWidget'
 import { Header } from './Widgets/Header'
+import { AboutProject } from './Widgets/AboutProject'
 
 export default function Home() {
 	return (
@@ -10,94 +12,11 @@ export default function Home() {
 		<div className={styles.container}>
 			<Header />
 			<main className={styles.content}>
-				<div>content1</div>
-				<div>content2</div>
-				<div>content3</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
-				<div>content</div>
+				<div className={styles.hero}>
+					<HeroWidget />
+					<AboutProject />
+				</div>
+				<div></div>
 			</main>
 		</div>
 		// </WithScrollOptions>

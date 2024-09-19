@@ -1,5 +1,6 @@
 import styles from './Header.module.scss'
 import Image from 'next/image'
+import '@/Shared/styles/visually-hidden.scss'
 
 import { PhoneCircle } from '../PhoneCircle/PhoneCircle'
 import { OrderCallButton } from '../OrderCallButton/OrderCallButton'
@@ -26,6 +27,7 @@ export function Header() {
 			/>
 
 			<button className={styles.header__center}>
+				<h1 className='visually-hidden'>Inchapin</h1>
 				<Image src={'/logo.svg'} alt='logo' width={187} height={30} />
 			</button>
 

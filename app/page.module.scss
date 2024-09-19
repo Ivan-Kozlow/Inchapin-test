@@ -5,8 +5,16 @@
 	margin: 0 auto;
 	padding: 0 20px;
 
+	.hero {
+		margin-bottom: 150px;
+	}
+
 	@include media1440() {
 		padding: 0 40px;
+
+		.hero {
+			margin-bottom: 110px;
+		}
 	}
 
 	@include media1024() {
@@ -15,9 +23,17 @@
 
 	@include media768() {
 		padding: 0 40px;
+
+		.hero {
+			margin-bottom: 90px;
+		}
 	}
 
 	@include media360() {
 		padding: 0 20px;
+
+		.hero {
+			margin-bottom: 55px;
+		}
 	}
 }
