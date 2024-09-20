@@ -3,7 +3,7 @@
 import styles from './FormOrderModal.module.scss'
 import { PopupProps } from 'reactjs-popup/dist/types'
 
-import Modal from '@/Shared/ui/Modal'
+import Modal from '@/shared/ui/Modal'
 import { FormOrder } from '../FormOrder/FormOrder'
 
 type TypeProps = {

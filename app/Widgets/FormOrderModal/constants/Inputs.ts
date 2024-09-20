@@ -1,4 +1,4 @@
-import { TypeInputProps } from '@/Shared/ui/Input/Input/Input'
+import { TypeInputProps } from '@/shared/ui/Input/Input/Input'
 import { IFormOrderInputs } from '../types/form'
 
 export interface IInputs extends TypeInputProps {

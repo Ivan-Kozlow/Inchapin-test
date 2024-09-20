@@ -2,7 +2,7 @@
 import styles from './Burger.module.scss'
 import { useRef } from 'react'
 
-import { useOutside } from '@/Shared/utils/useOutside/useOutside'
+import { useOutside } from '@/shared/utils/useOutside/useOutside'
 
 export function Burger() {
 	const burgerContentRef = useRef<HTMLUListElement>(null)

@@ -4,7 +4,7 @@ import { ControllerFieldState, ControllerRenderProps, UseFormStateReturn } from 
 
 import { IInputs } from '../../constants/Inputs'
 
-import { Input, InputPhone } from '@/Shared/ui/Input'
+import { Input, InputPhone } from '@/shared/ui/Input'
 import { IFormOrderInputs } from '../../types/form'
 
 type TypeProps = {

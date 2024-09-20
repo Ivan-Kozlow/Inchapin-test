@@ -1,6 +1,6 @@
 import styles from './Header.module.scss'
 import Image from 'next/image'
-import '@/Shared/styles/visually-hidden.scss'
+import '@/shared/styles/visually-hidden.scss'
 
 import { PhoneCircle } from '../PhoneCircle/PhoneCircle'
 import { OrderCallButton } from '../OrderCallButton/OrderCallButton'

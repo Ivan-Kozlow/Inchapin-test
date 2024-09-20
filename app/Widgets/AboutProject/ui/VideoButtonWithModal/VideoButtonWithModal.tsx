@@ -3,7 +3,7 @@
 import styles from './VideoButtonWithModal.module.scss'
 import Image from 'next/image'
 
-import Modal from '@/Shared/ui/Modal'
+import Modal from '@/shared/ui/Modal'
 
 export function VideoButtonWithModal() {
 	const cbRefFullscreen = (el: HTMLVideoElement) => {
