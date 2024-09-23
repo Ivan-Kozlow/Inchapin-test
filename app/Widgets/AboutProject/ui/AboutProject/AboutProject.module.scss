@@ -1,4 +1,4 @@
-@import '../../../../Shared/styles/mixins.scss';
+@import '@styles/mixins.scss';
 
 .section {
 	display: flex;
@@ -127,7 +127,7 @@
 			padding-right: 40px;
 
 			.arrow {
-				transform: scale(1) translate(5%, 90%);
+				transform: scale(1) translate(0%, 90%);
 			}
 
 			.image {
